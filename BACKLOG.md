@@ -8,6 +8,9 @@ Review yesterday’s code, diff, bugs and prior tests; add/update focused tests;
 ## Day 00 foundation prepared
 Next.js App Router, strict TypeScript, Mantine, React Icons, PWA shell, Prisma/PostgreSQL domain schema, polished responsive product dashboard, setup docs and local branch day-00-foundation.
 
+### Day 00 validation
+Nexus returned 404 for packages used by this project. Following the user's approval, dependencies were installed with npmjs fallback. The ignored local .npmrc preserves Nexus as default and contains only required scope overrides. Tests, lint, typecheck and production build passed; Day 01 has not started.
+
 | Day | Deliverable |
 |---|---|
 | 01 | Confirm acceptance criteria, route map, testing tools and privacy model; capture baseline quality results. |

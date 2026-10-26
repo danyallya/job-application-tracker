@@ -20,7 +20,7 @@ Next.js App Router, React, TypeScript, Mantine, React Icons, Prisma and PostgreS
 Requirements: Node.js 20.11+, npm and PostgreSQL 15+.
 
 1. Copy .env.example to .env and set DATABASE_URL for a local PostgreSQL database.
-2. Install dependencies with npm install.
+2. Install dependencies with npm ci.
 3. Generate the Prisma client with npm run db:generate.
 4. Apply a development migration with npm run db:migrate.
 5. Start the app with npm run dev and open http://localhost:3000.

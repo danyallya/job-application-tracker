@@ -1,2 +1,2 @@
 import type { MetadataRoute } from "next";
-export default function manifest():MetadataRoute.Manifest{return{name:"Folio Career Workspace",short_name:"Folio",description:"A private career search workspace.",start_url:"/",display:"standalone",background_color:"#f5f3ee",theme_color:"#f5f3ee",icons:[{src:"/icons/folio.svg",sizes:"any",type:"image/svg+xml",purpose:"any maskable"}]}}
+export default function manifest():MetadataRoute.Manifest{return{name:"Folio Career Workspace",short_name:"Folio",description:"A private career search workspace.",start_url:"/",display:"standalone",background_color:"#f5f3ee",theme_color:"#f5f3ee",icons:[{src:"/icons/folio.svg",sizes:"any",type:"image/svg+xml",purpose:"maskable"}]}}
