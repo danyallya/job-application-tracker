@@ -47,3 +47,7 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 A day is complete only when review, tests, implementation, debugging, documentation, tomorrow's plan and honest verification are recorded. Avoid activity-only commits.
 
 - Day 01: Done. The documented root/anchor route map, privacy boundary, test tools and passing baseline are recorded in README and DAILY-LOG. The navigation still exposes Settings and Help placeholders with no target; address their destinations while completing the responsive accessible shell on Day 02.
+
+## Process change effective Day 02 — 2026-10-27
+
+Apply [DELIVERY-POLICY.md](DELIVERY-POLICY.md) to every remaining ticket: finish Folio before the next repository, use meaningful scope-driven commits and deliver through its own reviewed PR. A blocked external gate needs a concrete record and next action. This adds delivery gates without moving Day 02–30 product work or changing completed history.
