@@ -13,7 +13,7 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 
 | Day | Deliverable |
 |---|---|
-| 01 | Confirm acceptance criteria, route map, testing tools and privacy model; capture baseline quality results. |
+| 01 | Done — document acceptance criteria, current route map, testing tools and privacy model; capture baseline quality results. |
 | 02 | Finish reusable responsive shell, accessible navigation and persisted theme behavior. |
 | 03 | Establish Prisma client boundary, reviewed migration and safe local seed data. |
 | 04 | Add sign-in/session flow and protected routes; test anonymous and expired sessions. |
@@ -45,3 +45,5 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | 30 | Publish release notes, deployment guide, product screenshots and next-quarter plan. |
 
 A day is complete only when review, tests, implementation, debugging, documentation, tomorrow's plan and honest verification are recorded. Avoid activity-only commits.
+
+- Day 01: Done. The documented root/anchor route map, privacy boundary, test tools and passing baseline are recorded in README and DAILY-LOG. The navigation still exposes Settings and Help placeholders with no target; address their destinations while completing the responsive accessible shell on Day 02.
