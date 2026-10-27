@@ -37,3 +37,7 @@ Historical Day 00/01 entries describe their original workflow. This policy super
 A pipeline-rule fix needs its own behavioral description; an independent navigation shell can warrant a different commit. Keep sensitive-data validation and its tests with the corresponding API change.
 
 Next planned scope: Day 02 — responsive reusable shell, accessible navigation destinations and persisted theme.
+
+## Contribution evidence
+
+Follow [CONTRIBUTING.md](CONTRIBUTING.md) within the existing delivery scope. Consider a synthetic application-stage or navigation reproduction with expected scope. Keep real issue links and agreed coauthor attribution with the matching change. Profile goals do not change commit counts, review gates, day numbering or authorization for external contact/settings/payment.
