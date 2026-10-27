@@ -58,3 +58,7 @@ The current preview uses source-defined examples and browser-only component stat
 
 ## Privacy
 Career history is sensitive. Every read and write must be scoped to the signed-in account. Production requires managed secrets, HTTPS, reviewed backups, private-data-safe logs and service-worker rules that never cache authenticated responses.
+
+## Delivery and review
+
+Folio's PR review must prove account-scoped job-search boundaries, honest preview metrics and working navigation destinations, including the recorded Settings and Help gaps. Follow [DELIVERY-POLICY.md](DELIVERY-POLICY.md) from Day 02 for sequential execution, scope-driven commits and this repository's separate branch/PR with GitHub panel review and merge.

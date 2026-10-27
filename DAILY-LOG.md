@@ -18,3 +18,10 @@
 - Checks: `npm test` passed (1 file, 2 tests); `npm run lint`, `npm run typecheck`, `npm run db:generate`, `npm run build`, and `git diff --check` passed. No database migration was run; the baseline requires no database service.
 - GitHub: implementation/docs commit `ef41557` (`docs: define day-one scope and privacy baseline`) was pushed to `day-01/acceptance-baseline`, fast-forwarded to `main`, and `main` was pushed. This log entry will be included in the final sync.
 - Next: Day 02 — complete the responsive shell, accessible navigation destinations and persisted theme behavior.
+
+## Review workflow maintenance — 2026-10-27
+
+- The user requested careful sequential project execution, commit content/counts suited to each product and an independent branch/PR per repository with panel review and merge.
+- Folio's PR review must prove account-scoped job-search boundaries, honest preview metrics and working navigation destinations, including the recorded Settings and Help gaps. Added a standalone delivery policy and entry points in AGENTS, README and BACKLOG.
+- Documentation-only maintenance on `docs/folio-account-review`; Markdown diff reviewed and `git diff --check` used. No application tests/build rerun for this process change. Next product work: Day 02 — responsive reusable shell, accessible navigation destinations and persisted theme.
+- This is the pre-merge log state. The portfolio workspace DELIVERY-RECEIPTS.md records the actual PR URL, checked head, panel gates, merge SHA and sync afterward; reconcile it here in the next authorized update.
