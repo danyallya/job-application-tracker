@@ -14,7 +14,7 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | Day | Deliverable |
 |---|---|
 | 01 | Done — document acceptance criteria, current route map, testing tools and privacy model; capture baseline quality results. |
-| 02 | Implemented, delivery blocked — shared shell, compact navigation, Settings/Help destinations and safe theme restoration; browser/PR panel gates pending. |
+| 02 | Implemented — shared shell, compact navigation, Settings/Help destinations and safe theme restoration. PR #4 is in final review; local desktop checks passed, GitHub has no configured checks, and live phone/tablet viewport validation remains unavailable. Issue #3 tracks the separately reproduced preview filter defect. |
 | 03 | Establish Prisma client boundary, reviewed migration and safe local seed data. |
 | 04 | Add sign-in/session flow and protected routes; test anonymous and expired sessions. |
 | 05 | Persist account-scoped application creation, editing and archiving with validation. |
