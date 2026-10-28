@@ -33,3 +33,11 @@
 - Documentation-only scope on docs/folio-private-contributions; reviewed Markdown and git diff --check. App tests/build are not rerun because runtime behavior is unchanged.
 - External blocker: local browser use is disabled in Work settings. PR creation, panel review and merge remain pending; resume from this branch when browser access is available, inspect existing PRs first, target main and follow all gates.
 - Publication is pre-merge here; the final PR/head/panel/check/merge/sync evidence goes in the workspace DELIVERY-RECEIPTS.md after completion. Next: Day 02 — responsive reusable shell, accessible navigation destinations and persisted theme. Wait for the user's day trigger.
+
+## Day 02 — Folio shared shell — 2026-10-28
+
+- Reconciled policy/contribution PRs #1/#2 at origin/main 4340009. Reviewed Day 01 navigation/privacy changes and existing theme effects. Initial appearance was written before restoration and storage exceptions could break startup. Added validated storage helpers and an initialization gate before writes.
+- Extracted WorkspaceShell for sidebar, header and search. Added skip link/main target, compact navigation and real Settings/Help explanation sections. Phone search stays editable and tablet settings/help controls remain present. Account settings, database writes and reports are not claimed.
+- npm test -- --maxWorkers=1 passed (2 files, 4 tests); lint and typecheck passed; build result is recorded in the workspace receipt. Local full diff review covers nine files before this log; storage helper cases use synthetic values and write only folio-theme. No database change or private career data.
+- Work browser disabled: live focus/phone/tablet/desktop/theme inspection and PR creation/exact-head panel Files changed/Checks/conversation/merge/sync pending. Branch day-02/folio-shell-navigation is preserved for those gates. No CI, independent approval or badge claim.
+- Next product scope is Day 03 Prisma boundary, reviewed migration and synthetic seed, after Day 02 delivery gates and its manual trigger. Existing preview date/metrics remain illustrative; this work changes shell behavior only.

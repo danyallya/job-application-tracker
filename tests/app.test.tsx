@@ -26,5 +26,10 @@ describe("job-application-tracker workspace", () => {
     expect(markup).toContain('id="calendar"');
     expect(markup).toContain('href="#insights"');
     expect(markup).toContain('id="insights"');
+    expect(markup).toContain('id="settings"');
+    expect(markup).toContain('id="help"');
+    expect(markup).toContain('aria-label="Compact workspace navigation"');
+    expect(markup).toContain('href="#overview"');
+    expect(markup).toContain('id="overview"');
   });
 });

@@ -66,3 +66,7 @@ Folio's PR review must prove account-scoped job-search boundaries, honest previe
 ## Contributions and examples
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for reproducible reports, genuine collaboration and product examples such as a sample job-search flow that contains no applicant or recruiter data. Contributions follow the product backlog and reviewed PR workflow.
+
+## Day 02 shell and appearance
+
+WorkspaceShell owns shared sidebar/header/search and compact phone navigation. Every Settings/Help link has an honest in-page destination; Skip to workspace content targets the main region. Phone navigation keeps destinations reachable instead of hiding the sidebar's only links, and narrow search remains editable. Theme restoration waits before writing, accepts only light/dark, falls back to system appearance and tolerates blocked storage. Only folio-theme is stored; job records remain session preview data. These sections explain current limits rather than implementing account settings. Static markup/storage tests and build checks do not replace pending browser focus/responsive/theme inspection.
