@@ -15,7 +15,7 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 |---|---|
 | 01 | Done — document acceptance criteria, current route map, testing tools and privacy model; capture baseline quality results. |
 | 02 | Merged — shared shell, compact navigation, Settings/Help destinations and safe theme restoration. PR #4 merged at `4679cc0`; local desktop checks passed, GitHub had no configured checks, and live phone/tablet viewport validation remains unavailable. Issue #3 tracks the separately reproduced preview filter defect. |
-| 03 | In progress — establish a server-only Prisma client boundary, reviewed migration and local-only synthetic seed; applying the migration and rerunning the seed await a local PostgreSQL service. |
+| 03 | Implementation and local checks complete; delivery blocked — establish a server-only Prisma client boundary, reviewed migration and local-only synthetic seed. Migration apply and repeat-seed acceptance require a local PostgreSQL service. |
 | 04 | Add sign-in/session flow and protected routes; test anonymous and expired sessions. |
 | 05 | Persist account-scoped application creation, editing and archiving with validation. |
 | 06 | Add application detail and activity history with loading, empty and error states. |

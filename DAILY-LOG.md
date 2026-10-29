@@ -54,3 +54,10 @@
 - Delivery: branch `day-03/prisma-seed-boundary` was pushed to `origin` with the implementation commit `9d79cbd` and documentation update. No PR was created. GitHub panel access remains blocked by the Kaspersky Endpoint Security untrusted-certificate warning; no bypass was attempted. Exact-head panel review, merge and local `main` sync are pending, and no CI result is claimed.
 - Browser review: not run because Computer Use was stopped by the physical Escape key earlier in this run. No visual or viewport result is claimed.
 - Next: complete local database acceptance and the exact-head Day 03 PR gates before Day 04; do not begin Day 04 automatically.
+
+### Day 03 delivery resumed — 2026-10-29
+
+- Re-ran local checks on `day-03/prisma-seed-boundary`: `npm test -- --maxWorkers=1` passed (3 files, 6 tests); `npm run lint`, `npm run typecheck`, `npm run db:generate`, `npm run build`, and `git diff --check` passed. The build is static preview only and does not establish database connectivity.
+- Rechecked the database prerequisite: `docker`, `postgres`, `pg_ctl` and `psql` are unavailable; no PostgreSQL Windows service or `.env` exists; `127.0.0.1:5432` is unreachable. The migration has not been applied and the seed has not been run twice. Next action is to activate a local PostgreSQL 15+ service, create only the dedicated `folio_dev` database, configure the ignored local `.env`, apply the checked-in migration, run the fictional seed twice and verify stable counts.
+- GitHub panel access has recovered; the earlier Kaspersky warning above is historical. The branch is pushed at `a36564143923ece08589159ba821067da8eba4b5`; a Draft PR and exact-head panel review have not yet been created. This server/database change does not alter the rendered interface; no new visual review or GitHub CI result is claimed.
+- Next: open the Day 03 Draft PR against `main`, review every changed file and its exact head/Checks/conversation, and keep it Draft until real local migration/repeat-seed acceptance passes. Do not start Day 04 automatically.
