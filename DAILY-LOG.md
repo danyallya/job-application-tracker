@@ -61,3 +61,9 @@
 - Rechecked the database prerequisite: `docker`, `postgres`, `pg_ctl` and `psql` are unavailable; no PostgreSQL Windows service or `.env` exists; `127.0.0.1:5432` is unreachable. The migration has not been applied and the seed has not been run twice. Next action is to activate a local PostgreSQL 15+ service, create only the dedicated `folio_dev` database, configure the ignored local `.env`, apply the checked-in migration, run the fictional seed twice and verify stable counts.
 - GitHub panel access has recovered; the earlier Kaspersky warning above is historical. The branch is pushed at `a36564143923ece08589159ba821067da8eba4b5`; a Draft PR and exact-head panel review have not yet been created. This server/database change does not alter the rendered interface; no new visual review or GitHub CI result is claimed.
 - Next: open the Day 03 Draft PR against `main`, review every changed file and its exact head/Checks/conversation, and keep it Draft until real local migration/repeat-seed acceptance passes. Do not start Day 04 automatically.
+
+### Day 03 GitHub draft — 2026-10-29
+
+- Created [PR #5](https://github.com/danyallya/job-application-tracker/pull/5) from `day-03/prisma-seed-boundary` against `main` as Draft. It contains the Prisma boundary, initial migration, guarded synthetic seed, tests and product documentation. The branch is pushed; GitHub Files changed/Checks/conversation still need review on the latest pushed head.
+- PR remains unmergeable by plan until a local PostgreSQL 15+ service is available and the dedicated folio_dev migration plus two-run seed acceptance passes. No GitHub CI or database acceptance is claimed.
+- Next: complete the exact-head panel review and continue to the next repository while preserving Draft; resume DB acceptance when the local service is available.
