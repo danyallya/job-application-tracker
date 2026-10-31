@@ -64,6 +64,13 @@
 
 ### Day 03 GitHub draft — 2026-10-29
 
-- Created [PR #5](https://github.com/danyallya/job-application-tracker/pull/5) from `day-03/prisma-seed-boundary` against `main` as Draft. It contains the Prisma boundary, initial migration, guarded synthetic seed, tests and product documentation. The branch is pushed; GitHub Files changed/Checks/conversation still need review on the latest pushed head.
+- Created [PR #5](https://github.com/danyallya/job-application-tracker/pull/5) from `day-03/prisma-seed-boundary` against `main` as Draft. It contains the Prisma boundary, initial migration, guarded synthetic seed, tests and product documentation. The branch was pushed at `f4a0bc6`; on 2026-10-31, GitHub Files changed showed 13/13 viewed, Checks showed zero configured runs, and Conversation had no comments. A later documentation-only update for the Day 04 gate requires exact-head review again after it is pushed.
 - PR remains unmergeable by plan until a local PostgreSQL 15+ service is available and the dedicated folio_dev migration plus two-run seed acceptance passes. No GitHub CI or database acceptance is claimed.
 - Next: complete the exact-head panel review and continue to the next repository while preserving Draft; resume DB acceptance when the local service is available.
+
+## Day 04 request — Day 03 prerequisite gate — 2026-10-31, Asia/Tehran
+
+- Reconciled Day 02 PR #4 at `origin/main` merge `4679cc0148d4cc9d43d13112e94131ceb7675cf5`. Before this documentation-only gate update, the clean `day-03/prisma-seed-boundary` branch and existing Draft PR #5 were at `f4a0bc6c4ddc41240f7ad247bc19a5c6c3a55712`, explicitly based on `main`. At that head, GitHub showed 13 changed files, 13/13 viewed, zero configured checks and no conversation comments. The PR description still accurately records the migration and repeat-seed acceptance gate; this docs update requires a fresh exact-head panel check after push. No independent approval or merge is claimed.
+- Rechecked the local PostgreSQL prerequisite: `psql`, `postgres`, `pg_ctl` and `docker` are unavailable; `127.0.0.1:5432` is unreachable; `.env` is absent. The migration has not been applied and the seed has not been run twice. Day 03 delivery remains blocked, so Day 04 authentication/protected-route work depending on the migrated user schema did not start. No application code changed and tests/build were not rerun.
+- Contribution opportunity: none for this blocked request; no external contact or activity was manufactured. `BACKLOG.md` now marks Day 04 as blocked by Day 03 without changing the 30-day schedule.
+- Next action: start a local PostgreSQL 15+ service; create only the dedicated `folio_dev` database and configure the ignored `.env`; run `npm run db:migrate`, then `npm run db:seed` twice and verify stable row counts. Recheck the exact PR head and gates, then finish Day 03 delivery before beginning Day 04 on a later manual trigger.
