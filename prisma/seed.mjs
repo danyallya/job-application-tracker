@@ -1,10 +1,17 @@
 import { PrismaClient } from '@prisma/client';
 import { assertSafeSeedTarget } from './seed-policy.mjs';
+import { hashPassword } from '../lib/password-hash.mjs';
 
 assertSafeSeedTarget(process.env.DATABASE_URL);
 
+const samplePassword = process.env.FOLIO_SAMPLE_PASSWORD;
+if (typeof samplePassword !== 'string' || samplePassword.length < 12 || samplePassword.length > 128) {
+  throw new Error('FOLIO_SAMPLE_PASSWORD must be set locally and contain 12 to 128 characters.');
+}
+
 const prisma = new PrismaClient();
 const sampleEmail = 'sample@folio.invalid';
+const samplePasswordHash = await hashPassword(samplePassword);
 const sampleApplications = [
   {
     id: 'sample_app_juniper',
@@ -68,8 +75,8 @@ try {
   await prisma.$transaction(async (transaction) => {
     const user = await transaction.user.upsert({
       where: { email: sampleEmail },
-      update: { name: 'Folio Sample Workspace' },
-      create: { email: sampleEmail, name: 'Folio Sample Workspace' },
+      update: { name: 'Folio Sample Workspace', passwordHash: samplePasswordHash },
+      create: { email: sampleEmail, name: 'Folio Sample Workspace', passwordHash: samplePasswordHash },
     });
 
     for (const { activity, occurredAt, ...application } of sampleApplications) {
