@@ -36,7 +36,7 @@ Historical Day 00/01 entries describe their original workflow. This policy super
 
 A pipeline-rule fix needs its own behavioral description; an independent navigation shell can warrant a different commit. Keep sensitive-data validation and its tests with the corresponding API change.
 
-Next planned scope: Day 02 — responsive reusable shell, accessible navigation destinations and persisted theme.
+Next planned scope: Day 03 — Prisma client boundary, migration and safe local seed acceptance.
 
 ## Contribution evidence
 

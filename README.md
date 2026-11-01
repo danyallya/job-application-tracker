@@ -19,11 +19,12 @@ Next.js App Router, React, TypeScript, Mantine, React Icons, Prisma and PostgreS
 ## Local setup
 Requirements: Node.js 20.11+, npm and PostgreSQL 15+.
 
-1. Copy .env.example to .env and set DATABASE_URL for a local PostgreSQL database.
+1. Create a dedicated local PostgreSQL database named `folio_dev`; copy .env.example to .env and set DATABASE_URL to that local database.
 2. Install dependencies with npm ci.
 3. Generate the Prisma client with npm run db:generate.
-4. Apply a development migration with npm run db:migrate.
-5. Start the app with npm run dev and open http://localhost:3000.
+4. Apply the checked-in development migration with npm run db:migrate.
+5. Optionally load fictional examples with npm run db:seed.
+6. Start the app with npm run dev and open http://localhost:3000.
 
 Persistence and account/session routes are scheduled follow-up work; the current dashboard renders its product preview without requiring a database connection. Never expose .env or the local private .npmrc.
 
@@ -34,10 +35,13 @@ Persistence and account/session routes are scheduled follow-up work; the current
 - npm run build — production build
 - npm run db:generate — refresh Prisma client
 - npm run db:migrate — create/apply a development migration
+- npm run db:seed — upsert fictional examples into the dedicated local folio_dev database
 - npm run db:studio — inspect local records
 
 ## Data model
-The initial Prisma schema contains User, Application and Activity. Applications are account-scoped and indexed for pipeline and recent updates. Review migrations before release; destructive changes need a reversible plan.
+The Prisma schema and initial migration contain User, Application and Activity. Applications are account-scoped and indexed for pipeline and recent updates. `lib/prisma.ts` provides a server-only client singleton for server code; the dashboard preview does not query it and still renders without PostgreSQL. Review migrations before release; destructive changes need a reversible plan.
+
+`npm run db:seed` is optional and restricted to a PostgreSQL URL whose host is loopback and database name is exactly `folio_dev`. It upserts the reserved `sample@folio.invalid` account, four fictional applications and their sample activities. Stable IDs avoid duplicate seed rows on repeat runs; the script never deletes records. Do not use real applicant or recruiter data in this seed.
 
 See AGENTS.md for the daily review and quality cycle and BACKLOG.md for the full 30-day schedule. The prepared local Git branch is day-00-foundation.
 
@@ -70,3 +74,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for reproducible reports, genuine collabo
 ## Day 02 shell and appearance
 
 WorkspaceShell owns shared sidebar/header/search and compact phone navigation. Every Settings/Help link has an honest in-page destination; Skip to workspace content targets the main region. Phone navigation keeps destinations reachable instead of hiding the sidebar's only links, and narrow search remains editable. Theme restoration waits before writing, accepts only light/dark, falls back to system appearance and tolerates blocked storage. Only folio-theme is stored; job records remain session preview data. These sections explain current limits rather than implementing account settings. The local desktop preview at 1265 CSS pixels showed no horizontal overflow; keyboard focus starts at the skip link, and the theme persists after reload. The available browser tab could not emulate a narrow viewport, so phone/tablet rendering remains unverified; static checks and CSS review do not substitute for that view.
+
+## Day 03 Prisma boundary and local sample data
+
+`lib/prisma.ts` is the server-only Prisma Client singleton, with development hot-reload reuse. The initial checked-in migration creates the current User, Application and Activity schema. The preview dashboard does not import the database client or claim persistence.
+
+To use the optional seed, create a dedicated local PostgreSQL database named `folio_dev`, copy `.env.example` to `.env`, set local credentials, generate the client, apply migrations, then run `npm run db:seed`. The seed script refuses non-loopback hosts or any database name other than `folio_dev`. It upserts the reserved `sample@folio.invalid` user, four fictional opportunities and their sample activity rows using stable IDs; rerunning it does not add duplicates and it never deletes records.
+
+The existing preview filter issue remains open: the “Recently updated” control changes its caption without changing results. Day 08 already covers combined filters and sorting; fix and test it there without treating this Day 03 database work as its resolution.

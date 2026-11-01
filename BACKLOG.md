@@ -14,9 +14,9 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | Day | Deliverable |
 |---|---|
 | 01 | Done — document acceptance criteria, current route map, testing tools and privacy model; capture baseline quality results. |
-| 02 | Implemented — shared shell, compact navigation, Settings/Help destinations and safe theme restoration. PR #4 is in final review; local desktop checks passed, GitHub has no configured checks, and live phone/tablet viewport validation remains unavailable. Issue #3 tracks the separately reproduced preview filter defect. |
-| 03 | Establish Prisma client boundary, reviewed migration and safe local seed data. |
-| 04 | Add sign-in/session flow and protected routes; test anonymous and expired sessions. |
+| 02 | Merged — shared shell, compact navigation, Settings/Help destinations and safe theme restoration. PR #4 merged at `4679cc0`; local desktop checks passed, GitHub had no configured checks, and live phone/tablet viewport validation remains unavailable. Issue #3 tracks the separately reproduced preview filter defect. |
+| 03 | Implementation and checks complete; PostgreSQL 18.6 migration and repeat-seed acceptance passed locally on 2026-11-01. PR #5 remains Draft pending exact-head panel review and merge. |
+| 04 | Pending Day 03 PR #5 merge — add sign-in/session flow and protected routes; test anonymous and expired sessions. |
 | 05 | Persist account-scoped application creation, editing and archiving with validation. |
 | 06 | Add application detail and activity history with loading, empty and error states. |
 | 07 | Add stage transitions and audit events with keyboard-accessible controls. |
@@ -54,4 +54,4 @@ Apply [DELIVERY-POLICY.md](DELIVERY-POLICY.md) to every remaining ticket: finish
 
 ## Contribution integration — 2026-10-27
 
-Effective Day 02: apply [CONTRIBUTING.md](CONTRIBUTING.md) inside existing tickets. At already scheduled weekly reviews, assess real feedback such as a synthetic application-stage or navigation reproduction with expected scope; at documentation/setup tickets, improve a sample job-search flow that contains no applicant or recruiter data. Day 30 records actual contribution evidence and outstanding external dependencies. No day is renumbered and no quota or badge is a completion criterion. Next scope remains: Day 02 — responsive reusable shell, accessible navigation destinations and persisted theme.
+Effective Day 02: apply [CONTRIBUTING.md](CONTRIBUTING.md) inside existing tickets. At already scheduled weekly reviews, assess real feedback such as a synthetic application-stage or navigation reproduction with expected scope; at documentation/setup tickets, improve a sample job-search flow that contains no applicant or recruiter data. Day 30 records actual contribution evidence and outstanding external dependencies. No day is renumbered and no quota or badge is a completion criterion. Next: finish Day 03 PR #5 review/merge, then Day 04 sign-in/session flow and protected routes.
