@@ -55,3 +55,5 @@ Apply [DELIVERY-POLICY.md](DELIVERY-POLICY.md) to every remaining ticket: finish
 ## Contribution integration — 2026-10-27
 
 Effective Day 02: apply [CONTRIBUTING.md](CONTRIBUTING.md) inside existing tickets. At already scheduled weekly reviews, assess real feedback such as a synthetic application-stage or navigation reproduction with expected scope; at documentation/setup tickets, improve a sample job-search flow that contains no applicant or recruiter data. Day 30 records actual contribution evidence and outstanding external dependencies. No day is renumbered and no quota or badge is a completion criterion.
+
+- Review follow-up for Issue #3 (Day 01–02): removed the unsupported “Recently updated” toggle, made the all-applications state explicit, and made the search action clear the query to restore every item. Recency sorting stays on Day 08 until records have typed update timestamps.
