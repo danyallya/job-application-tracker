@@ -90,7 +90,7 @@ WorkspaceShell owns shared sidebar/header/search and compact phone navigation. E
 
 To use the optional seed, create a dedicated local PostgreSQL database named `folio_dev`, copy `.env.example` to `.env`, set local credentials, generate the client, apply migrations, then run `npm run db:seed`. The seed script refuses non-loopback hosts or any database name other than `folio_dev`. It upserts the reserved `sample@folio.invalid` user, four fictional opportunities and their sample activity rows using stable IDs; rerunning it does not add duplicates and it never deletes records.
 
-The existing preview filter issue remains open: the “Recently updated” control changes its caption without changing results. Day 08 already covers combined filters and sorting; fix and test it there without treating this Day 03 database work as its resolution.
+The application list currently shows all session-only sample and newly entered applications. Search filters by company, role and stage; **Clear search to view all applications** restores the full list. Recency sorting is not offered until application records have typed update timestamps and the Day 08 sorting/filter work is implemented.
 
 ## Day 04 credentials and session boundary
 

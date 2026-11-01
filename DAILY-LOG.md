@@ -95,3 +95,8 @@
 - Contribution review: no separate issue or external collaboration opportunity was warranted for this focused account-boundary change; no activity or coauthor credit was manufactured.
 - Delivery: branch `day-04/secure-sessions` is based on synchronized `origin/main`. The temporary database server and local `.env` were removed after validation; no private configuration, generated output or sample credential is intended for the PR. No Day 04 PR or remote check/review result is claimed yet.
 - Next: review the complete implementation diff and staged file list, commit the coherent Day 04 change, push the branch, create a PR explicitly against `main`, then review every file/check/conversation at its exact head and merge only if GitHub permits. Day 05 remains manual and unstarted.
+
+## Review follow-up — Issue #3 application-list control — 2026-11-01
+
+- Removed the “Recently updated” label that implied unavailable behavior. The list now identifies itself as “All applications”; the action clears search to restore the complete result set. Typed timestamps and actual recency sorting remain Day 08 scope.
+- Updated the README and static-render regression coverage. Branch: `fix/honest-application-list-controls`. `npm test -- --maxWorkers=1` passed (4 files / 10 tests); `npm run lint`, `npm run typecheck`, `npm run build` and `git diff --check` passed.

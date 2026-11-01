@@ -15,6 +15,9 @@ describe("job-application-tracker workspace", () => {
   it("renders its initial workspace content", () => {
     const markup = renderWorkspace();
     expect(markup).toContain("FOLIO");
+    expect(markup).toContain('aria-label="Application list view">All applications</span>');
+    expect(markup).toContain("Showing all applications");
+    expect(markup).not.toContain("Recently updated");
   });
 
   it("keeps the current workspace destinations available as in-page anchors", () => {
