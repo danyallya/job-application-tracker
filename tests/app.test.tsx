@@ -31,5 +31,6 @@ describe("job-application-tracker workspace", () => {
     expect(markup).toContain('aria-label="Compact workspace navigation"');
     expect(markup).toContain('href="#overview"');
     expect(markup).toContain('id="overview"');
+    expect(markup).toContain('href="/sign-in"');
   });
 });
