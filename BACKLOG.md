@@ -16,8 +16,8 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | 01 | Done — document acceptance criteria, current route map, testing tools and privacy model; capture baseline quality results. |
 | 02 | Merged — shared shell, compact navigation, Settings/Help destinations and safe theme restoration. PR #4 merged at `4679cc0`; local desktop checks passed, GitHub had no configured checks, and live phone/tablet viewport validation remains unavailable. Issue #3 tracks the separately reproduced preview filter defect. |
 | 03 | Merged — PostgreSQL 18.6 migration and repeat-seed acceptance passed locally on 2026-11-01. PR [#5](https://github.com/danyallya/job-application-tracker/pull/5) merged at `25e3897`; local `main` is synchronized. |
-| 04 | Implementation and local acceptance complete on `day-04/secure-sessions`: password-verified sign-in, expiring database sessions, sign-out and server protection for `/workspace`; anonymous/expired tests and browser flows passed. PR creation and exact-head panel review/merge remain pending. |
-| 05 | Persist account-scoped application creation, editing and archiving with validation. |
+| 04 | Merged — password-verified sign-in, expiring database sessions, sign-out and server protection for `/workspace`. PR [#6](https://github.com/danyallya/job-application-tracker/pull/6) merged at `b28a1e32172fdc1e3c5d72ef5ec471cbfa0e7030`; local `main` was reconciled at `b46cf52ba21aaefc6c69531536fe483884184e59` after the Issue #3 follow-up. |
+| 05 | Done — persist account-scoped application creation, editing and soft archiving with server-side validation. Add synthetic records only in the local `folio_dev` database; do not claim production readiness or accessibility conformance. |
 | 06 | Add application detail and activity history with loading, empty and error states. |
 | 07 | Add stage transitions and audit events with keyboard-accessible controls. |
 | 08 | Add search, stage filters, sorting and pagination; test combined filters. |
@@ -56,4 +56,8 @@ Apply [DELIVERY-POLICY.md](DELIVERY-POLICY.md) to every remaining ticket: finish
 
 Effective Day 02: apply [CONTRIBUTING.md](CONTRIBUTING.md) inside existing tickets. At already scheduled weekly reviews, assess real feedback such as a synthetic application-stage or navigation reproduction with expected scope; at documentation/setup tickets, improve a sample job-search flow that contains no applicant or recruiter data. Day 30 records actual contribution evidence and outstanding external dependencies. No day is renumbered and no quota or badge is a completion criterion.
 
-- Review follow-up for Issue #3 (Day 01–02): removed the unsupported “Recently updated” toggle, made the all-applications state explicit, and made the search action clear the query to restore every item. Recency sorting stays on Day 08 until records have typed update timestamps.
+- Review follow-up for Issue #3 (Day 01–02): removed the unsupported “Recently updated” toggle, made the all-applications state explicit, and made the search action clear the query to restore every item. PR [#7](https://github.com/danyallya/job-application-tracker/pull/7) merged this verified fix and closed the issue. Recency sorting stays on Day 08 until records have typed update timestamps.
+
+## Day 05 delivery
+
+Application creation, editing, validation and account-scoped archiving are implemented and tested on branch `day-05/account-scoped-applications`. Next scope is Day 06: application detail and activity history with loading, empty and error states. A new manual user trigger is still required.

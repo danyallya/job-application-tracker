@@ -36,7 +36,7 @@ Historical Day 00/01 entries describe their original workflow. This policy super
 
 A pipeline-rule fix needs its own behavioral description; an independent navigation shell can warrant a different commit. Keep sensitive-data validation and its tests with the corresponding API change.
 
-Next planned scope: Day 05 — account-scoped application creation, editing and archiving.
+Next planned scope: Day 06 — application detail and activity history with loading, empty and error states.
 
 ## Contribution evidence
 
